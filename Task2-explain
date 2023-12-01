@@ -1,0 +1,30 @@
+Rotary Positional Embedding:
+Model Size:
+The Rotary Positional Embedding introduces additional parameters, specifically the alpha parameter for rotational embeddings. The overall increase in model size will depend on the embedding dimension and the number of parameters introduced by the rotary positional embeddings.
+Capabilities:
+Rotary positional embeddings aim to capture relative positional information more effectively than traditional sinusoidal positional embeddings. They have shown promising results in enhancing the performance of transformer models on tasks that require understanding sequential relationships.
+Potential Pitfalls:
+Computational Cost: Rotary positional embeddings may introduce additional computational costs due to the need for rotational calculations.
+Hyperparameter Sensitivity: The effectiveness of rotary positional embeddings may depend on hyperparameter choices, such as the embedding dimension and the choice of the alpha parameter.
+Improvements:
+Rotary positional embeddings may improve the model's ability to capture long-range dependencies and sequential patterns, potentially enhancing performance on tasks requiring such capabilities.
+Group Query Attention:
+Model Size:
+The model size is influenced by the Group Query Attention mechanism. This mechanism might add parameters depending on its design and the number of groups considered in the attention process.
+Capabilities:
+Group Query Attention modifies the standard self-attention mechanism by grouping queries and adapting the attention calculation. This could improve the model's ability to attend to different parts of the input sequence simultaneously.
+Potential Pitfalls:
+Increased Complexity: The group query attention introduces additional complexity, which could impact training time and resource requirements.
+Hyperparameter Tuning: Choosing the appropriate hyperparameters for the group query attention (e.g., the number of groups) may be crucial for its effectiveness.
+Improvements:
+Group Query Attention has the potential to enhance the model's performance on tasks where capturing diverse information from different parts of the sequence is beneficial.
+Sliding Window Attention:
+Model Size:
+Sliding Window Attention could affect the model size, especially if it introduces additional parameters related to the sliding window mechanism.
+Capabilities:
+Sliding Window Attention allows the model to focus on a limited local context, which could be advantageous for tasks where long-range dependencies are less critical.
+Potential Pitfalls:
+Limited Context: The sliding window mechanism might discard information beyond the local window, which can be detrimental for tasks requiring global context understanding.
+Hyperparameter Sensitivity: The window size is a critical hyperparameter, and an inappropriate choice might lead to suboptimal performance.
+Improvements:
+Sliding Window Attention might improve the model's efficiency by reducing computational requirements while maintaining competitive performance on tasks where global context is less crucial.
