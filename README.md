@@ -5,7 +5,7 @@ Name: Shivam Kanojia
 Entry Number: 2019CS510131
 
 
-You train Logistic Regression with a certain set of features and learn weights w_0, w_1 till w_n. Feature n gets weight w_n at the end of training. Say you now create a new dataset where you duplicate feature n into feature (n+1) and retrain a new model. Suppose this new model weights are w_{new_0}, w_{new_1} till w_{new_n}, w_{new_{n+1}}. What is the likely relationship between w_{new_0}, w_{new_1} , w_{new_n}, and w_{new_{n+1}}?
+1.You train Logistic Regression with a certain set of features and learn weights w_0, w_1 till w_n. Feature n gets weight w_n at the end of training. Say you now create a new dataset where you duplicate feature n into feature (n+1) and retrain a new model. Suppose this new model weights are w_{new_0}, w_{new_1} till w_{new_n}, w_{new_{n+1}}. What is the likely relationship between w_{new_0}, w_{new_1} , w_{new_n}, and w_{new_{n+1}}?
 
 Soln.  When we duplicate feature n into feature (n+1) and retrain logistic regression model, the    weights wnew0, wnew1, wnew n, wnew n+1 will exhibit a specific relationship.
 When you duplicate a feature n into feature (n+1), it means that both features n and (n+1) are essentially representing the same information in the model. Therefore, the weights corresponding to these duplicated features are expected to be similar or identical.
@@ -13,10 +13,10 @@ In a logistic regression model, the weights are assigned to features to indicate
 Wnew0 (bias term): This weight might be similar to w0     in the original model, but the exact value could be influenced by the overall learning process and the interaction with other features.
 Wnew1: This weight is associated with the original feature 1 and is not directly influenced by the duplication of feature n into feature (n+1). Therefore, wnew1 may be similar to w1    in the original model, but it could be influenced by the retraining process.
 
-You currently have an email marketing template A and you want to replace it with a better template. A is the control_template. You also test email templates B, C, D, E. You send exactly 1000 emails of each template to different random users. You wish to figure out what email gets the highest click through rate. Template A gets 10% click through rate (CTR), B gets 7% CTR, C gets 8.5% CTR, D gets 12% CTR and E gets 14% CTR. You want to run your multivariate test till you get 95% confidence in a conclusion. Which of the following is true?
-We have too little data to conclude that A is better or worse than any other template with 95% confidence.
-E is better than A with over 95% confidence, B is worse than A with over 95% confidence. You need to run the test for longer to tell where C and D compare to A with 95% confidence.
-Both D and E are better than A with 95% confidence. Both B and C are worse than A with over 95% confidence
+2.You currently have an email marketing template A and you want to replace it with a better template. A is the control_template. You also test email templates B, C, D, E. You send exactly 1000 emails of each template to different random users. You wish to figure out what email gets the highest click through rate. Template A gets 10% click through rate (CTR), B gets 7% CTR, C gets 8.5% CTR, D gets 12% CTR and E gets 14% CTR. You want to run your multivariate test till you get 95% confidence in a conclusion. Which of the following is true?
+-We have too little data to conclude that A is better or worse than any other template with 95% confidence.
+-E is better than A with over 95% confidence, B is worse than A with over 95% confidence. You need to run the test for longer to tell where C and D compare to A with 95% confidence.
+-Both D and E are better than A with 95% confidence. Both B and C are worse than A with over 95% confidence
 Soln.  To determine the significance of the results in a multivariate test, we can use hypothesis testing and confidence intervals. The click-through rates (CTRs) you provided are as follows:
 A (control_template): 10% CTR
 B: 7% CTR
@@ -30,9 +30,9 @@ E is better than A with over 95% confidence, B is worse than A with over 95% con
 This option seems reasonable. It acknowledges the confidence in the comparison between E and A, as well as B and A. It also recognizes the need for more data to assess the comparisons between C and A, and D and A.
 Both D and E are better than A with 95% confidence. Both B and C are worse than A with over 95% confidence.
 This statement is making a stronger claim. It suggests definitive conclusions about D and E being better than A and B and C being worse than A. Such strong conclusions might be premature without further testing.
-Considering the caution warranted in making strong claims and the need for more data to assess the comparisons involving Templates C and D, the most accurate option is:
+Considering the caution warranted in making strong claims and the need for more data to assess the comparisons involving Templates C and D, the most reasonable option is:
 We have too little data to conclude that A is better or worse than any other template with 95% confidence.
-You have m training examples and n features. Your feature vectors are however sparse and the average number of non-zero entries in each train example is k and k << n. What is the approximate computational cost of each gradient descent iteration of logistic regression in modern well written packages?
+3.You have m training examples and n features. Your feature vectors are however sparse and the average number of non-zero entries in each train example is k and k << n. What is the approximate computational cost of each gradient descent iteration of logistic regression in modern well written packages?
 
 Soln. In logistic regression, the cost of each gradient descent iteration is determined by the complexity of computing the gradient of the cost function with respect to the parameters. The specific implementation details can vary across different packages, but I'll provide a general overview.
 Let's denote the number of training examples as m, the number of features as n, and the average number of non-zero entries in each training example as k, where k≪n.
@@ -46,7 +46,7 @@ Modern well-written packages, such as scikit-learn or TensorFlow, are optimized 
 The approximate computational cost per iteration can be expressed in big-O notation as: O(m⋅n⋅k). This takes into account the matrix multiplication and the fact that k is the average number of non-zero entries in each training example. Keep in mind that this is a rough estimate and the actual implementation details can vary across packages. The efficiency gains from sparse matrix representations and optimized linear algebra libraries are crucial for handling large datasets with sparse features.
 
 
-We are interested in building a high quality text classifier that categorizes news stories into 2 categories - information and entertainment. We want the classifier to stick with predicting the better among these two categories (this classifier won't try to predict a percent score for these two categories). You have already trained V1 of a classifier with 10,000 news stories from the New York Times, which is one of 1000 new sources we would like the next version of our classifier (let's call it V2) to correctly categorize stories for. You would like to train a new classifier with the original 10,000 New York Times news stories and an additional 10,000 different news stories and no more. Below are approaches to generating the additional 10,000 pieces of train data for training V2.
+4.We are interested in building a high quality text classifier that categorizes news stories into 2 categories - information and entertainment. We want the classifier to stick with predicting the better among these two categories (this classifier won't try to predict a percent score for these two categories). You have already trained V1 of a classifier with 10,000 news stories from the New York Times, which is one of 1000 new sources we would like the next version of our classifier (let's call it V2) to correctly categorize stories for. You would like to train a new classifier with the original 10,000 New York Times news stories and an additional 10,000 different news stories and no more. Below are approaches to generating the additional 10,000 pieces of train data for training V2.
 
 
 Run our V1 classifier on 1 Million random stories from the 1000 news sources. Get the 10k stories where the V1 classifier’s output is closest to the decision boundary and get these examples labeled.
